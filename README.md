@@ -8,25 +8,25 @@
 |_______|  |___|  |_______||_______|
 ```
 
-Handy event finder/generator for the excitement seeking London-er.
+Handy event finder/generator for the thrillseekers.
 
-# How To Run
+## How To Run
 ```
 Clone repository
 Profit $$$
 ```
 
-# Technologies Used
+## Technologies Used
 * JavaScript
 * Jasmine
 * Jquery
 
-# Screenshots
+## Screenshots
 * Insert screenshot here
 
-# My Approach
+## My Approach
 * Insert picture here
 
-# Reflection
+## Reflection
 * How might you change your program if you needed to support multiple events at the same location?
 * How would you change your program if you were working with a much larger world size?
