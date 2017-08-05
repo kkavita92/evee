@@ -3,17 +3,16 @@
 describe("Ticket", function() {
 
   var ticket;
+  var eventPrice = 100.00;
 
   beforeEach(function() {
-    ticket = new Ticket();
+    ticket = new Ticket(eventPrice);
   });
 
-  it("has a price greater than 0", function() {
-    expect(ticket.price).toBeGreaterThan(0);
+  it("has a price", function() {
+    expect(ticket.price).toEqual(eventPrice);
   });
 
-  it("has a price lesser than 100", function() {
-    expect(ticket.price).toBeLessThan(100); //change to default max price
-  });
+
 
 });

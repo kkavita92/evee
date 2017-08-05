@@ -14,7 +14,9 @@ describe("Event", function() {
   });
 
   it("has more than zero tickets", function () {
-    expect(event.numberOfTickets).toBeGreaterThan(0);
+    expect(event.tickets.length).toEqual(100);
+    console.log(event.tickets[0].price);
+    console.log(event.tickets[1].price);
   });
 
 });
