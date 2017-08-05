@@ -1,5 +1,9 @@
 'use strict';
 
 var Ticket = function() {
-  this.price = (Math.random() * 99 + 1).toFixed(2);
+  this.price = this.allocateRandomPrice(100);
+};
+
+Ticket.prototype.allocateRandomPrice = function(maxPrice) {
+  return (Math.random() * (maxPrice - 1) + 1).toFixed(2);
 };

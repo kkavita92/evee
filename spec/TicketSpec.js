@@ -10,13 +10,10 @@ describe("Ticket", function() {
 
   it("has a price greater than 0", function() {
     expect(ticket.price).toBeGreaterThan(0);
-    console.log(ticket.price);
   });
 
   it("has a price lesser than 100", function() {
-    expect(ticket.price).toBeLessThan(100);
-    console.log(ticket.price);
+    expect(ticket.price).toBeLessThan(100); //change to default max price
   });
-
 
 });
