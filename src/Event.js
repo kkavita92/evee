@@ -14,7 +14,7 @@ Event.prototype.generateTickets = function() {
 
   for( var i = 0; i < numberOfTickets ; i++ ) {
     this.tickets.push(new Ticket(this.eventPrice));
-  };  
+  };
 };
 
 Event.prototype.setTicketPrice = function(maximumPrice) {
