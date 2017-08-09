@@ -1,7 +1,7 @@
 'use strict';
 
 var EventsListing = function(area_width,area_height) {
-  this.area = new World(area_width, area_height)
+  this.area = new World(area_width, area_height);
   this.distanceCalculator = new DistanceCalculator();
   this.events = [];
 };

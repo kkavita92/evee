@@ -22,19 +22,4 @@ describe("World", function() {
     // make test more thorough?
   });
 
-  it("populate world fills grid with events", function() {
-    world.populateWorld();
-    // expect(world.grid).toContain(2);
-  });
-
-  describe("Population randomiser", function () {
-
-    it("returns either 1 or 0", function() {
-      var randomiserReturnsZero = (world.populationRandomiser() == 0);
-      var randomiserReturnsOne = (world.populationRandomiser() == 1);
-      expect(randomiserReturnsZero || randomiserReturnsOne).toBe(true);
-    });
-
-  });
-
 });
