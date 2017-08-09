@@ -1,3 +1,5 @@
 body {
-  background-color: red;
+  background-image: url("../images/londonbackground.jpg");
+  background-size: 1400px 1000px;
+  background-attachment: fixed;
 }
