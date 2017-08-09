@@ -18,3 +18,8 @@ Event.prototype.generateTickets = function() {
 Event.prototype.setEventCapacity = function() {
   return Math.floor((Math.random() * 150) + 1);
 };
+
+Event.prototype.getCheapestTicket = function() {
+  var ticketsSortedByPrice = this.tickets.sort((a, b) => a.price - b.price);
+  return ticketsSortedByPrice[0];
+};

@@ -21,4 +21,9 @@ describe("Event", function() {
     expect(event.tickets.length).toEqual(event.eventCapacity);
   });
 
+  it("returns the lowest priced ticket", function() {
+    //mock instance of Ticket  
+    expect(event.getCheapestTicket().price).toBeLessThan(100);
+  });
+
 });
