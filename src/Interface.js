@@ -3,6 +3,10 @@
 var Interface = function() {
   this.userCoordinates = null;
   this.world = new World(5,5);
+  this.initialiseWorld();
+};
+
+Interface.prototype.initialiseWorld = function() {
   this.world.createWorld();
   this.world.populateWorld();
 };
