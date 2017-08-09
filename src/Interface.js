@@ -2,11 +2,12 @@
 
 var Interface = function() {
   this.userCoordinates = null;
-  this.world = new World(5,5);
-  this.initialiseWorld();
+  this.world = null;
+  this.initialiseWorld(5, 5);
 };
 
-Interface.prototype.initialiseWorld = function() {
+Interface.prototype.initialiseWorld = function(world_width, world_height) {
+  this.world = new World(world_width, world_height);
   this.world.createWorld();
   this.world.populateWorld();
 };
@@ -25,4 +26,14 @@ Interface.prototype.getClosestEvents = function() {
 
   events.sort((a,b)=> a.distance-b.distance);
   return events;
+};
+
+Interface.prototype.returnList = function() {
+  var events = this.getClosestEvents();
+  for (var i = 0; i < events.length; i++ ) {
+    var id = (events[i].eventID);
+    var ticket = (events[i].getCheapestTicket().price);
+    var distance = (events[i].distance);
+    console.log(`Event ${id} - $${ticket}, Distance ${distance}`);
+  };
 };
