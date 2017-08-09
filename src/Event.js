@@ -1,7 +1,8 @@
 'use strict';
 
-var Event = function(eventID) {
+var Event = function(eventID, x_coordinate, y_coordinate) {
   this.eventID = eventID;
+  this.eventCoordinates = [x_coordinate, y_coordinate];
   this.eventCapacity = this.setEventCapacity()
   this.tickets = [];
   this.generateTickets();

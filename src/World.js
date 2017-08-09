@@ -4,6 +4,7 @@ var World = function(width, height) {
   this.width = width;
   this.height = height;
   this.grid = null
+  this.eventsList = new EventsList();
 };
 
 World.prototype.createWorld = function() {
@@ -20,7 +21,9 @@ World.prototype.populateWorld = function() {
     for ( var k = 0; k < this.width; k++ ) {
       var randomBinary = this.populationRandomiser();
       if (randomBinary === 1 ) {
-        this.grid[j][k] = new Event(eventCount);
+        var newEvent = new Event(eventCount, k, j);
+        this.grid[j][k] = newEvent;
+        this.eventsList.addNewEvent(newEvent);
         eventCount++;
       };
     };
