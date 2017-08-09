@@ -9,11 +9,9 @@ EventsListing.prototype.generateEvents = function() {
   var eventCount = 1;
   for ( var j = 0; j < this.area.height; j++ ) {
     for ( var k = 0; k < this.area.width; k++ ) {
-      var randomBinary = this.populationRandomiser();
+      var randomBinary = this.getRandomBinary();
       if (randomBinary === 1 ) {
-        var newEvent = new Event(eventCount, k, j);
-        this.area.grid[j][k] = newEvent;
-        this.addNewEvent(newEvent);
+        this.generateNewEvent(eventCount, k, j)
         eventCount++;
       };
     };
@@ -21,9 +19,14 @@ EventsListing.prototype.generateEvents = function() {
   return this.grid;
 };
 
-EventsListing.prototype.populationRandomiser = function() {
-  var random = Math.round(Math.random());
-  return random;
+EventsListing.prototype.generateNewEvent = function(eventID, x_coordinate, y_coordinate) {
+  var newEvent = new Event(eventID, x_coordinate, y_coordinate);
+  this.area.grid[x_coordinate][y_coordinate] = newEvent;
+  this.addNewEvent(newEvent);
+};
+
+EventsListing.prototype.getRandomBinary = function() {
+  return Math.round(Math.random());
 };
 
 EventsListing.prototype.addNewEvent = function(newEvent) {
