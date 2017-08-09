@@ -2,6 +2,7 @@ body {
   background-image: url("../images/londonbackground.jpg");
   background-size: 1400px 1000px;
   background-attachment: fixed;
+  font-family: 'Rokkitt', serif;
 }
 
 #main-app {
@@ -19,4 +20,35 @@ body {
   text-align: center;
   font-family: 'Pacifico', cursive;
   font-size: 60px;
+}
+
+#location-input {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: grey}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
