@@ -7,9 +7,13 @@ body {
 #main-app {
   background-color: white;
   width: 30%;
-  height: 70%;
+  height: 80%;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   border-radius: 25px;
+}
+
+#header {
+  text-align: center;
 }
