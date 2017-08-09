@@ -3,6 +3,18 @@
 var EventsListing = function(area_width,area_height) {
   this.area = new World(area_width, area_height)
   this.events = [];
+  this.distanceCalculator = new DistanceCalculator();
+};
+
+EventsListing.prototype.addNewEvent = function(newEvent) {
+  this.events.push(newEvent);
+};
+
+EventsListing.prototype.findEventsDistanceFrom = function(coordinates) {
+  var events = this.events;
+  for(var i = 0; i < events.length; i++) {
+    events[i].distance = this.distanceCalculator.calculateDistance(coordinates, events[i].eventCoordinates);
+  };
 };
 
 EventsListing.prototype.generateEvents = function() {
@@ -27,8 +39,4 @@ EventsListing.prototype.generateNewEvent = function(eventID, x_coordinate, y_coo
 
 EventsListing.prototype.getRandomBinary = function() {
   return Math.round(Math.random());
-};
-
-EventsListing.prototype.addNewEvent = function(newEvent) {
-  this.events.push(newEvent);
 };
