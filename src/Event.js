@@ -6,6 +6,7 @@ var Event = function(eventID, x_coordinate, y_coordinate) {
   this.eventCapacity = this.setEventCapacity()
   this.tickets = [];
   this.generateTickets();
+  this.distance = null;
 };
 
 Event.prototype.generateTickets = function() {
