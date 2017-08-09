@@ -2,15 +2,14 @@
 
 var Interface = function() {
   this.userCoordinates = null;
-  this.world = null;
+  this.eventsListing = null;
   this.distanceCalculator = new DistanceCalculator();
-  this.initialiseWorld(5, 5);
+  this.createEventsListing(5, 5);
 };
 
-Interface.prototype.initialiseWorld = function(world_width, world_height) {
-  this.world = new World(world_width, world_height);
-  this.world.createWorld();
-  this.world.populateWorld();
+Interface.prototype.createEventsListing = function(area_width, area_height) {
+  this.eventsListing = new EventsListing(area_width, area_height);
+  this.eventsListing.generateEvents();
 };
 
 Interface.prototype.getUserCoordinates = function(x_coordinate, y_coordinate) {
@@ -18,7 +17,7 @@ Interface.prototype.getUserCoordinates = function(x_coordinate, y_coordinate) {
 };
 
 Interface.prototype.getClosestEvents = function() {
-  var events = this.world.eventsList.returnEventsList();
+  var events = this.eventsListing.returnEventsList();
   for (var i = 0; i < events.length; i++) { //move this to EventsList
     events[i].distance = this.distanceCalculator.calculateDistance(this.userCoordinates, events[i].eventCoordinates);
   };
