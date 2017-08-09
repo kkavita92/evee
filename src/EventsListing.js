@@ -2,8 +2,8 @@
 
 var EventsListing = function(area_width,area_height) {
   this.area = new World(area_width, area_height)
-  this.events = [];
   this.distanceCalculator = new DistanceCalculator();
+  this.events = [];
 };
 
 EventsListing.prototype.addNewEvent = function(newEvent) {

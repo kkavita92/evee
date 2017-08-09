@@ -3,7 +3,6 @@
 var Interface = function() {
   this.userCoordinates = null;
   this.eventsListing = null;
-  this.distanceCalculator = new DistanceCalculator();
   this.createEventsListing(5, 5);
 };
 

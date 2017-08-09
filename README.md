@@ -25,7 +25,8 @@ Profit $$$
 * Insert screenshot here
 
 ## My Approach
-* Insert picture here
+To do the tech test, I picked JavaScript as I know Viagogo uses it more (than Ruby). Additionally, I had been reading up on ES6 syntax recently and wanted a chance to try and incorporate some of it.
+
 
 ## Reflection
 * How might you change your program if you needed to support multiple events at the same location?
