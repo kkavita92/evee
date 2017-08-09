@@ -29,7 +29,3 @@ EventsListing.prototype.populationRandomiser = function() {
 EventsListing.prototype.addNewEvent = function(newEvent) {
   this.events.push(newEvent);
 };
-
-EventsListing.prototype.returnEventsList = function() {
-  return this.events;
-};

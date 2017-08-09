@@ -17,7 +17,7 @@ Interface.prototype.getUserCoordinates = function(x_coordinate, y_coordinate) {
 };
 
 Interface.prototype.getClosestEvents = function() {
-  var events = this.eventsListing.returnEventsList();
+  var events = this.eventsListing.events;
   for (var i = 0; i < events.length; i++) { //move this to EventsList
     events[i].distance = this.distanceCalculator.calculateDistance(this.userCoordinates, events[i].eventCoordinates);
   };
