@@ -3,3 +3,13 @@ body {
   background-size: 1400px 1000px;
   background-attachment: fixed;
 }
+
+#main-app {
+  background-color: white;
+  width: 30%;
+  height: 70%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-radius: 25px;
+}
