@@ -19,7 +19,7 @@ Profit $$$
 ## Technologies Used
 * JavaScript
 * Jasmine
-* Jquery
+* JQuery
 
 ## Screenshots
 * Insert screenshot here

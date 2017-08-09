@@ -21,8 +21,4 @@ describe("Event", function() {
     expect(event.tickets.length).toEqual(event.eventCapacity);
   });
 
-  it("has tickets of equivalent prices", function() {
-    expect(event.tickets[0].price).toEqual(event.tickets[1].price);
-  });
-
 });
