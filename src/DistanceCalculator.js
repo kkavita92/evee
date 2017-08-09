@@ -9,5 +9,5 @@ DistanceCalculator.prototype.calculateDistance = function(point_one, point_two) 
 };
 
 DistanceCalculator.prototype.calculateLineDistance = function(a, b) {
-  Math.abs(a - b);
+  return Math.abs(a - b);
 };
