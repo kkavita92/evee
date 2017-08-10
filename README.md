@@ -6,7 +6,7 @@ Event finder based on location coordinates.
 ```
 1. Clone repository
 2. Open index.html in your browser
-3. Input coordinates and click Submit
+3. Input coordinates and click Find Events
 ```
 
 ## Technologies Used
