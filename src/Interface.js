@@ -28,10 +28,13 @@ Interface.prototype.sortEventsByDistance = function() {
 
 Interface.prototype.returnList = function() {
   var events = this.getClosestEvents();
+  var formattedEvents = [];
   for (var i = 0; i < events.length; i++ ) {
     var id = (events[i].eventID);
     var ticket = (events[i].getCheapestTicket().price);
     var distance = (events[i].distance);
-    console.log(`Event ${id} - $${ticket}, Distance ${distance}`);
+    formattedEvents.push(`Event ${id} - $${ticket}, Distance ${distance}`);
   };
+
+  return formattedEvents;
 };
