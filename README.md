@@ -8,7 +8,7 @@
 |_______|  |___|  |_______||_______|
 ```
 
-Handy event finder/generator for the thrillseekers.
+Event finder based on location coordinates.
 
 ## How To Run
 ```
