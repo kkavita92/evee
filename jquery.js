@@ -6,11 +6,9 @@ $(document).ready(function() {
     $( '#enter-coordinates' ).hide(function() {
     $( '#enter-coordinates' ).remove();
     $('#user-status').text(`Your coordinates are: ${app.userCoordinates}`)
-    $('#content').append(`<p>${app.getClosestEvents()[0].eventID}</p>`);
-    $('#content').append(`<p>${app.getClosestEvents()[1].eventID}</p>`);
-    $('#content').append(`<p>${app.getClosestEvents()[2].eventID}</p>`);
-    $('#content').append(`<p>${app.getClosestEvents()[3].eventID}</p>`);
-    $('#content').append(`<p>${app.getClosestEvents()[4].eventID}</p>`);
+    for (var i = 0; i < 5; i++ ) {
+      $('#content').append(`<p>${app.returnList()[i]}</p>`);
+    };
     $('#content').append("<button>Reset</button>");
   });
  })
@@ -18,6 +16,5 @@ $(document).ready(function() {
 $('#content').on("click", "button", function(){
     location.reload()
 });
-
 
 });
