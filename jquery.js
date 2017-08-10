@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   function addResultsDisplay() {
     $('#content').css({
-      "background-color" : "FloralWhite",
+      "background-color" : "GhostWhite",
       "width": "90%",
       "border-radius": "25px",
       "display": "block",

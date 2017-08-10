@@ -23,7 +23,10 @@ Input coordinates and click Submit
 * JQuery
 
 ## Screenshots
-* Insert screenshot here
+![Evee](public/images/screenshot_three.png)
+![What's Evee](public/images/screenshot_two.png)
+![Results](public/images/screenshot_four.png)
+
 
 ## My Approach
 The first step was to plan the programme, brainstorm what the possible JS objects were going to be and how the objects would link together. My priorities for the project were to write clean and readable code and to meet the basic requirements set out in the instructions.
@@ -68,7 +71,7 @@ The programme is already configured to be flexible in terms of changing world si
 
 This was a fun challenge overall - particularly with figuring out how to randomly generate seed data. The thing I struggled with the most was figuring out how the different constructors were linking together, but with multiple diagrams and refactoring, this was achieved eventually.
 
-The biggest takeaway from this was that sometimes your 'original plan' doesn't work the way you want and it is completely OK to re-visit and make some amendments. Initially, I had my event generation and listing within ```World``` but upon realising that all that wasn't really ```World```'s responsibility and that it was getting clunky FAST, I knew I had to change the interactions between my constructors. 
+The biggest takeaway from this was that sometimes your 'original plan' doesn't work the way you want and it is completely OK to re-visit and make some amendments. Initially, I had my event generation and listing within ```World``` but upon realising that all that wasn't really ```World```'s responsibility and that it was getting clunky FAST, I knew I had to change the interactions between my constructors.
 
 On reflection, there are a few things which I wonder if I could have done differently, namely the way in which I have generated events. I chose to iterate through each coordinate on the grid and then based on a random binary generator, would add an event if ```randomBinary === 1```. Alternatively, I might have chosen something with
 
