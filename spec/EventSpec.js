@@ -13,6 +13,10 @@ describe("Event", function() {
     expect(event.eventID).toEqual(1)
   });
 
+  it("can set event capacity to greater than zero", function() {
+    expect(event.setEventCapacity()).toBeGreaterThan(0);
+  });
+
   it("stores more than zero tickets", function() {
     expect(event.tickets.length).toBeGreaterThan(0);
   });
@@ -22,7 +26,7 @@ describe("Event", function() {
   });
 
   it("returns the lowest priced ticket", function() {
-    //mock instance of Ticket  
+    expect(event.getCheapestTicket().price).toBeGreaterThan(0);
     expect(event.getCheapestTicket().price).toBeLessThan(100);
   });
 

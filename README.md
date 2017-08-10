@@ -13,7 +13,8 @@ Handy event finder/generator for the thrillseekers.
 ## How To Run
 ```
 Clone repository
-Profit $$$
+Open index.html in your browser
+Input coordinates and click Submit
 ```
 
 ## Technologies Used
