@@ -22,7 +22,7 @@ Interface.prototype.getClosestEvents = function() {
 
 Interface.prototype.sortEventsByDistance = function() {
   this.eventsListing.findEventsDistanceFrom( this.userCoordinates );
-  this.eventsListing.events.sort((a,b)=> a.distance-b.distance);
+  this.eventsListing.events.sort((a,b)=> a.distance-b.distance || a.eventID - b.eventID);
   return this.eventsListing.events;
 };
 
@@ -35,6 +35,7 @@ Interface.prototype.closestEventsList = function() {
   }
 
   return formattedEvents;
+  console.log(formattedEvents);
 };
 
 Interface.prototype.formatEvent = function( unformattedEvent ) {
