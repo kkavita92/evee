@@ -11,7 +11,7 @@ describe("Interface", function() {
   it("can set user coordinates", function() {
     app.getUserCoordinates(3, 5);
     expect(app.userCoordinates).toEqual([3,5]);
-  }); //testing setter method!?
+  });
 
   it("can create an events listing", function() {
     app.createEventsListing();

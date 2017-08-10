@@ -35,7 +35,6 @@ Interface.prototype.closestEventsList = function() {
   }
 
   return formattedEvents;
-  console.log(formattedEvents);
 };
 
 Interface.prototype.formatEvent = function( unformattedEvent ) {
