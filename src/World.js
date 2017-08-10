@@ -10,7 +10,7 @@ var World = function( width, height ) {
 World.prototype.createWorld = function() {
   var newWorld = new Array();
   for ( var i = 0; i < this.height; i++ ) {
-    newWorld[i] = new Array(this.width);
+    newWorld[i] = new Array( this.width );
   }
   this.grid = newWorld;
 };

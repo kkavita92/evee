@@ -1,7 +1,7 @@
 'use strict';
 
 var EventsListing = function( areaWidth,areaHeight ) {
-  this.area = new World(areaWidth, areaHeight);
+  this.area = new World( areaWidth, areaHeight );
   this.distanceCalculator = new DistanceCalculator();
   this.events = [];
 };
@@ -32,7 +32,7 @@ EventsListing.prototype.generateEvents = function() {
 };
 
 EventsListing.prototype.generateNewEvent = function( eventID, xCoordinate, yCoordinate ) {
-  var newEvent = new Event(eventID, xCoordinate, yCoordinate);
+  var newEvent = new Event( eventID, xCoordinate, yCoordinate );
   this.area.grid[xCoordinate][yCoordinate] = newEvent;
   this.addNewEvent(newEvent);
 };

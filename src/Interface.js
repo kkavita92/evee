@@ -7,12 +7,12 @@ var Interface = function() {
 };
 
 Interface.prototype.createEventsListing = function( areaWidth, areaHeight ) {
-  this.eventsListing = new EventsListing(areaWidth, areaHeight);
+  this.eventsListing = new EventsListing( areaWidth, areaHeight );
   this.eventsListing.generateEvents();
 };
 
 Interface.prototype.getUserCoordinates = function( xCoordinate, yCoordinate ) {
-  this.userCoordinates = [xCoordinate, yCoordinate];
+  this.userCoordinates = [ xCoordinate, yCoordinate ];
 };
 
 Interface.prototype.getClosestEvents = function() {

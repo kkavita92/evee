@@ -2,7 +2,7 @@
 
 var Event = function( eventID, xCoordinate, yCoordinate ) {
   this.eventID = eventID;
-  this.eventCoordinates = [xCoordinate, yCoordinate];
+  this.eventCoordinates = [ xCoordinate, yCoordinate ];
   this.eventCapacity = this.setEventCapacity();
   this.tickets = [];
   this.generateTickets();
