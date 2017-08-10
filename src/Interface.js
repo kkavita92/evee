@@ -30,11 +30,16 @@ Interface.prototype.returnList = function() {
   var events = this.getClosestEvents();
   var formattedEvents = [];
   for (var i = 0; i < events.length; i++ ) {
-    var id = (events[i].eventID);
-    var ticket = (events[i].getCheapestTicket().price);
-    var distance = (events[i].distance);
-    formattedEvents.push(`Event ${id} - $${ticket}, Distance ${distance}`);
+    var formattedEvent = this.formatEvent(events[i]);
+    formattedEvents.push(formattedEvent);
   };
 
   return formattedEvents;
+};
+
+Interface.prototype.formatEvent = function(unformattedEvent) {
+  var eventID = unformattedEvent.eventID;
+  var cheapestTicketPrice = unformattedEvent.getCheapestTicket().price;
+  var distance = unformattedEvent.distance;
+  return `Event ${eventID} - $${cheapestTicketPrice}, Distance ${distance}`;
 };
