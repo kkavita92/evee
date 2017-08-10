@@ -5,13 +5,19 @@ $(document).ready(function() {
   $('#submitcoordinates').click(function() {
     app.getUserCoordinates($("#xcoordinate").val(), $("#ycoordinate").val());
     hideLocationForm();
+    hideAppInfo();
     showResults();
+    return false;
   });
 
   function hideLocationForm() {
     $( '#enter-coordinates' ).hide(function() {
       $( '#enter-coordinates' ).remove();
     });
+  }
+
+  function hideAppInfo() {
+    $( '#app-info' ).hide();
   }
 
   function showResults() {
