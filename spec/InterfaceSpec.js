@@ -2,20 +2,20 @@
 
 describe("Interface", function() {
 
-  var user;
+  var app;
 
   beforeEach( function() {
-    user = new Interface();
+    app = new Interface();
   });
 
   it("can set user coordinates", function() {
-    user.getUserCoordinates(3, 5);
-    expect(user.userCoordinates).toEqual([3,5]);
+    app.getUserCoordinates(3, 5);
+    expect(app.userCoordinates).toEqual([3,5]);
   }); //testing setter method!?
 
   it("can create an events listing", function() {
-    user.createEventsListing();
-    expect(user.eventsListing).toBeDefined();
+    app.createEventsListing();
+    expect(app.eventsListing).toBeDefined();
   });
 
 });
