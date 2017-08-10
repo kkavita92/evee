@@ -1,6 +1,6 @@
 body {
-  background-image: url("../images/londonbackground.jpg");
-  background-size: 1400px 1000px;
+  background-image: url("../images/londonbackground2.jpg");
+  background-size: 1200px 800px;
   background-attachment: fixed;
   font-family: 'Rokkitt', serif;
 }
@@ -12,7 +12,7 @@ h3 {
 #main-app {
   background-color: white;
   width: 30%;
-  height: 80%;
+  height: 90%;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
