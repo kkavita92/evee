@@ -14,6 +14,7 @@ Event finder based on location coordinates.
 * Jasmine
 * JQuery
 
+
 ## Screenshots
 ![Evee](public/images/screenshot_three.png)
 ![What's Evee](public/images/screenshot_two.png)
@@ -53,6 +54,7 @@ I decided to create a GUI-front end ~~because I like things to look pretty~~ to 
 * Event capacity - the maximum number of tickets generated for each event is set at ```150```.
 * Not all coordinates on the grid will have events - events are seeded into grid randomly.
 
+
 ## Questions
 
 **Q: How might you change your program if you needed to support multiple events at the same location?**
@@ -61,11 +63,38 @@ The current 2-dimensional grid can be changed to a multidimensional one so that 
 
 Currently, the ```generateEvents``` method within the ```EventsListing``` constructor is adding a new event to each coordinate based on the randomiser. This would be amended accordingly as well. Instead, we could iterate through the grid, and for each location, add an array with a randomised number of events (from 0 to max number of events per location).
 
-[example code?]
+Some very rough example code below:
+```
+EventsListing.prototype.generateEvents = function() {
+  for ( var yCoordinate = 0; yCoordinate < this.world.height; yCoordinate++ ) {
+    for ( var xCoordinate = 0; xCoordinate < this.world.width; xCoordinate++ ) {
+      var currentLocation = this.world.grid[yCoordinate][xCoordinate];
+      var randomNumberOfEvents = this.getRandomInteger();
+      currentLocation = this.generateEvent( randomNumberOfEvents, xCoordinate, yCoordinate ));
+    }
+  }
+  return this.world.grid;
+};
+
+EventsListing.prototype.generateEvent = function( number, xCoordinate, yCoordinate ) {
+  var events = [];
+  for ( var i = 0; i < number; i++ ) {
+    events.push( new Event( this.eventID, xCoordinate, yCoordinate ) );
+    this.eventID++;
+  };
+
+  return events;
+};
+
+EventsListing.prototype.getRandomInteger() {
+  return Math.floor(Math.random() * (10 + 1));
+};
+```
 
 **Q: How would you change your program if you were working with a much larger world size?**
 
 The programme is already configured to be flexible in terms of changing world sizes. The ```height``` and ```width``` of your 'world' are accepted as arguments when creating a new Interface. Currently, the app is being initialised within ```jquery.js``` with these values set to 20 each (```new Interface( 20, 20)``` ) but this can be easily changed to whatever your heart desires.
+
 
 ## Reflection
 
@@ -78,6 +107,7 @@ On reflection, there are a few things which I wonder if I could have done differ
 Alternatively, I could have chosen something with less probability like generating random X and Y coordinates and adding an event if point is empty. This could have also prevented the clustering of eventIDs I had since new events would not be created in order of co-ordinates.
 
 I've also left the event generation responsibility within the ```EventsListing``` constructor. This could possibly have been extracted to its own object as well.
+
 
 ## What's Next For Evee?
 * More test coverage.
