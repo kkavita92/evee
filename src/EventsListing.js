@@ -1,19 +1,19 @@
 'use strict';
 
-var EventsListing = function(areaWidth,areaHeight) {
+var EventsListing = function( areaWidth,areaHeight ) {
   this.area = new World(areaWidth, areaHeight);
   this.distanceCalculator = new DistanceCalculator();
   this.events = [];
 };
 
-EventsListing.prototype.addNewEvent = function(newEvent) {
+EventsListing.prototype.addNewEvent = function( newEvent ) {
   this.events.push(newEvent);
 };
 
-EventsListing.prototype.findEventsDistanceFrom = function(coordinates) {
+EventsListing.prototype.findEventsDistanceFrom = function( coordinates ) {
   var events = this.events;
-  for(var i = 0; i < events.length; i++) {
-    events[i].distance = this.distanceCalculator.calculateDistance(coordinates, events[i].eventCoordinates);
+  for( var i = 0; i < events.length; i++ ) {
+    events[i].distance = this.distanceCalculator.calculateDistance( coordinates, events[i].eventCoordinates );
   }
 };
 
@@ -22,8 +22,8 @@ EventsListing.prototype.generateEvents = function() {
   for ( var yCoordinate = 0; yCoordinate < this.area.height; yCoordinate++ ) {
     for ( var xCoordinate = 0; xCoordinate < this.area.width; xCoordinate++ ) {
       var randomBinary = this.getRandomBinary();
-      if (randomBinary === 1 ) {
-        this.generateNewEvent(eventCount, xCoordinate, yCoordinate);
+      if ( randomBinary === 1 ) {
+        this.generateNewEvent( eventCount, xCoordinate, yCoordinate );
         eventCount++;
       }
     }
@@ -31,7 +31,7 @@ EventsListing.prototype.generateEvents = function() {
   return this.grid;
 };
 
-EventsListing.prototype.generateNewEvent = function(eventID, xCoordinate, yCoordinate) {
+EventsListing.prototype.generateNewEvent = function( eventID, xCoordinate, yCoordinate ) {
   var newEvent = new Event(eventID, xCoordinate, yCoordinate);
   this.area.grid[xCoordinate][yCoordinate] = newEvent;
   this.addNewEvent(newEvent);

@@ -1,6 +1,6 @@
 'use strict';
 
-var Event = function(eventID, xCoordinate, yCoordinate) {
+var Event = function( eventID, xCoordinate, yCoordinate ) {
   this.eventID = eventID;
   this.eventCoordinates = [xCoordinate, yCoordinate];
   this.eventCapacity = this.setEventCapacity();

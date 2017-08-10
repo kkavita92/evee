@@ -6,12 +6,12 @@ var Interface = function() {
   this.createEventsListing(20, 20);
 };
 
-Interface.prototype.createEventsListing = function(areaWidth, areaHeight) {
+Interface.prototype.createEventsListing = function( areaWidth, areaHeight ) {
   this.eventsListing = new EventsListing(areaWidth, areaHeight);
   this.eventsListing.generateEvents();
 };
 
-Interface.prototype.getUserCoordinates = function(xCoordinate, yCoordinate) {
+Interface.prototype.getUserCoordinates = function( xCoordinate, yCoordinate ) {
   this.userCoordinates = [xCoordinate, yCoordinate];
 };
 
@@ -29,7 +29,7 @@ Interface.prototype.sortEventsByDistance = function() {
 Interface.prototype.closestEventsList = function() {
   var events = this.getClosestEvents();
   var formattedEvents = [];
-  for (var i = 0; i < events.length; i++ ) {
+  for ( var i = 0; i < events.length; i++ ) {
     var formattedEvent = this.formatEvent(events[i]);
     formattedEvents.push(formattedEvent);
   }
@@ -37,7 +37,7 @@ Interface.prototype.closestEventsList = function() {
   return formattedEvents;
 };
 
-Interface.prototype.formatEvent = function(unformattedEvent) {
+Interface.prototype.formatEvent = function( unformattedEvent ) {
   var eventID = unformattedEvent.eventID;
   var cheapestTicketPrice = unformattedEvent.getCheapestTicket().price;
   var distance = unformattedEvent.distance;

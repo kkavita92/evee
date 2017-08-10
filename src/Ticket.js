@@ -5,6 +5,6 @@ var Ticket = function() {
   this.price = this.allocateRandomPrice(this.DEFAULT_MAXIMUM_PRICE);
 };
 
-Ticket.prototype.allocateRandomPrice = function(maxPrice) {
+Ticket.prototype.allocateRandomPrice = function( maxPrice ) {
   return (Math.random() * (maxPrice - 1) + 1).toFixed(2);
 };
