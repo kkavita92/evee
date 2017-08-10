@@ -6,19 +6,19 @@ var Interface = function() {
   this.createEventsListing(5, 5);
 };
 
-Interface.prototype.createEventsListing = function(area_width, area_height) {
-  this.eventsListing = new EventsListing(area_width, area_height);
+Interface.prototype.createEventsListing = function(areaWidth, areaHeight) {
+  this.eventsListing = new EventsListing(areaWidth, areaHeight);
   this.eventsListing.generateEvents();
 };
 
-Interface.prototype.getUserCoordinates = function(x_coordinate, y_coordinate) {
-  this.userCoordinates = [x_coordinate, y_coordinate];
+Interface.prototype.getUserCoordinates = function(xCoordinate, yCoordinate) {
+  this.userCoordinates = [xCoordinate, yCoordinate];
 };
 
 Interface.prototype.getClosestEvents = function() {
   var eventsSortedByDistance = this.sortEventsByDistance();
   return eventsSortedByDistance.slice(0, 5);
-}
+};
 
 Interface.prototype.sortEventsByDistance = function() {
   this.eventsListing.findEventsDistanceFrom(this.userCoordinates);
@@ -26,13 +26,13 @@ Interface.prototype.sortEventsByDistance = function() {
   return this.eventsListing.events;
 };
 
-Interface.prototype.returnList = function() {
+Interface.prototype.closestEventsList = function() {
   var events = this.getClosestEvents();
   var formattedEvents = [];
   for (var i = 0; i < events.length; i++ ) {
     var formattedEvent = this.formatEvent(events[i]);
     formattedEvents.push(formattedEvent);
-  };
+  }
 
   return formattedEvents;
 };

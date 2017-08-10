@@ -2,9 +2,9 @@
 
 var DistanceCalculator = function() {};
 
-DistanceCalculator.prototype.calculateDistance = function(point_one, point_two) {
-  var xDiff = this.calculateLineDistance(point_one[0], point_two[0]);
-  var yDiff = this.calculateLineDistance(point_one[1], point_two[1]);
+DistanceCalculator.prototype.calculateDistance = function(pointOne, pointTwo) {
+  var xDiff = this.calculateLineDistance(pointOne[0], pointTwo[0]);
+  var yDiff = this.calculateLineDistance(pointOne[1], pointTwo[1]);
   return xDiff + yDiff;
 };
 

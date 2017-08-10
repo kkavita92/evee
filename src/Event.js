@@ -1,9 +1,9 @@
 'use strict';
 
-var Event = function(eventID, x_coordinate, y_coordinate) {
+var Event = function(eventID, xCoordinate, yCoordinate) {
   this.eventID = eventID;
-  this.eventCoordinates = [x_coordinate, y_coordinate];
-  this.eventCapacity = this.setEventCapacity()
+  this.eventCoordinates = [xCoordinate, yCoordinate];
+  this.eventCapacity = this.setEventCapacity();
   this.tickets = [];
   this.generateTickets();
   this.distance = null;
@@ -14,7 +14,7 @@ Event.prototype.generateTickets = function() {
 
   for( var i = 0; i < numberOfTickets ; i++ ) {
     this.tickets.push(new Ticket());
-  };
+  }
 };
 
 Event.prototype.setEventCapacity = function() {

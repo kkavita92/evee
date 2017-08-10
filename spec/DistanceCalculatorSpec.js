@@ -13,9 +13,9 @@ describe("DistanceCalculator", function() {
   });
 
   it("can calculate total distance between two points", function() {
-    var point_one = [3,4];
-    var point_two = [2,3];
-    expect(distanceCalculator.calculateDistance(point_one, point_two)).toEqual(2);
+    var pointOne = [3,4];
+    var pointTwo = [2,3];
+    expect(distanceCalculator.calculateDistance(pointOne, pointTwo)).toEqual(2);
   });
 
 });

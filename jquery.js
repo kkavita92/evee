@@ -8,7 +8,7 @@ $(document).ready(function() {
       $('#user-status').text(`Your coordinates are: ${app.userCoordinates}`)
       $('#user-status').append("<br>Your closest events are:</br>")
       for (var i = 0; i < 5; i++ ) {
-        $('#content').append(`<p>${app.returnList()[i]}</p>`);
+        $('#content').append(`<p>${app.closestEventsList()[i]}</p>`);
       };
       $('#content').append("<button class='button'>Reset</button>");
       $('#content').css({
@@ -19,7 +19,7 @@ $(document).ready(function() {
         "margin-left": "auto",
         "margin-right": "auto",
         "padding-top": "5px",
-        "padding-bottom": "10px"    
+        "padding-bottom": "10px"
       });
     });
   })
