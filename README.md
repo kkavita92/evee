@@ -1,12 +1,12 @@
-![Logo](public/images/logo.png)
+![Logo](public/images/logo.PNG)
 
 Event finder based on location coordinates.
 
 ## How To Run
 ```
-Clone repository
-Open index.html in your browser
-Input coordinates and click Submit
+1. Clone repository
+2. Open index.html in your browser
+3. Input coordinates and click Submit
 ```
 
 ## Technologies Used
