@@ -1,6 +1,6 @@
 body {
   background-image: url("../images/londonbackground2.jpg");
-  background-size: 1200px 800px;
+  background-size: 1400px 1000px;
   background-attachment: fixed;
   font-family: 'Rokkitt', serif;
 }
@@ -29,6 +29,15 @@ h3 {
 
 #location-input {
   text-align: center;
+}
+
+#app-info {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  bottom: 15;
+  right: 0;
 }
 
 .button {

@@ -4,7 +4,10 @@
     <link href='public/stylesheets/style.css' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="src/Ticket.js"></script>
     <script src="src/Event.js"></script>
     <script src="src/EventsListing.js"></script>
@@ -19,12 +22,17 @@
       <div id="location-input">
         <h3 id="user-status">What's your location?<h3>
         <div id="content">
-        <form id="enter-coordinates">
-          <input id="xcoordinate" type="text" placeholder="x-coordinate"></input>
-          <p><input id="ycoordinate" type="text" placeholder="y-coordinate"></input>
-          <p><input id="submitcoordinates" class="button" type="button"></input>
-        </form>
-      </div>
+          <form id="enter-coordinates">
+            <input id="xcoordinate" type="text" placeholder="x-coordinate"></input>
+            <p><input id="ycoordinate" type="text" placeholder="y-coordinate"></input>
+            <p><button id="submitcoordinates" class="button">Find Events</button>
+          </form>
+          <div id="app-info">What's Evee?</div>
+          <div id="dialog" title="Confirmation Required">
+            Evee is an event generator which finds you the nearest events based on
+            your exact location. Enter your coordinates to get started! 
+          </div>
+        </div>
       </div>
     <div>
   </body>

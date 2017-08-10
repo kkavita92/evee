@@ -2,6 +2,27 @@ $(document).ready(function() {
 
   var app = new Interface( 20, 20 );
 
+    $("#dialog").dialog({
+      autoOpen: false,
+      modal: true
+    });
+
+  $("#app-info").click(function(e) {
+    e.preventDefault();
+    var targetUrl = $(this).attr("href");
+
+    $("#dialog").dialog({
+      title: "What's Evee?",
+      buttons : {
+        "OK" : function() {
+          $(this).dialog("close");
+        }
+      }
+    });
+
+    $("#dialog").dialog("open");
+  });
+
   $('#submitcoordinates').click(function() {
     app.getUserCoordinates($("#xcoordinate").val(), $("#ycoordinate").val());
     hideLocationForm();
