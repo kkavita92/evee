@@ -37,7 +37,7 @@ I wanted to ensure that there was a separation of concerns so that each object s
 | DistanceCalculator | Calculates Manhattan distance between two points. |
 | Interface | Only part of programme user directly interacts with. Initialises a list of events and returns 5 nearest events to coordinates user inputs. |
 
-I also followed a TDD-approach as much as possible across my codebase. If you'd like to run the tests, please open ```SpecRunner.html``` in your browser after cloning the directory to your server.
+I also followed a **TDD-approach** as much as possible across my codebase. If you'd like to run the tests, please open ```SpecRunner.html``` in your browser after cloning the directory to your server.
 
 ![Unit Tests](public/images/tests.png)
 
@@ -61,7 +61,7 @@ I decided to create a GUI-front end ~~because I like things to look pretty~~ to 
 
 The current 2-dimensional grid can be changed to a multidimensional one so that each co-ordinate/location would contain an array which can hold multiple events.
 
-Currently, the ```generateEvents``` method within the ```EventsListing``` constructor is adding a new event to each coordinate based on the randomiser. This would be amended accordingly as well. Instead, we could iterate through the grid, and for each location, add an array with a randomised number of events (from 0 to max number of events per location).
+Currently, the ```generateEvents``` method within the ```EventsListing``` object is adding a new event to each coordinate based on the randomiser. This would be amended accordingly as well. Instead, we could iterate through the grid, and for each location, add an array with a randomised number of events (from 0 to max number of events per location).
 
 Some very rough example code below:
 ```
@@ -106,7 +106,7 @@ On reflection, there are a few things which I wonder if I could have done differ
 
 Alternatively, I could have chosen something with less probability like generating random X and Y coordinates and adding an event if point is empty. This could have also prevented the clustering of eventIDs I had since new events would not be created in order of co-ordinates.
 
-I've also left the event generation responsibility within the ```EventsListing``` constructor. This could possibly have been extracted to its own object as well.
+I've also left the event generation responsibility within the ```EventsListing``` object. This could possibly have been extracted to its own object as well.
 
 
 ## What's Next For Evee?
