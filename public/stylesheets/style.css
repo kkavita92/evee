@@ -5,6 +5,10 @@ body {
   font-family: 'Rokkitt', serif;
 }
 
+h3 {
+  margin-top: 0px;
+}
+
 #main-app {
   background-color: white;
   width: 30%;
@@ -17,6 +21,7 @@ body {
 
 #header {
   margin-top: 0px;
+  margin-bottom: 0px;
   text-align: center;
   font-family: 'Pacifico', cursive;
   font-size: 60px;
