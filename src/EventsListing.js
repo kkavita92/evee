@@ -7,7 +7,7 @@ var EventsListing = function( areaWidth,areaHeight ) {
 };
 
 EventsListing.prototype.addNewEvent = function( newEvent ) {
-  this.events.push(newEvent);
+  this.events.push( newEvent );
 };
 
 EventsListing.prototype.findEventsDistanceFrom = function( coordinates ) {
@@ -34,9 +34,9 @@ EventsListing.prototype.generateEvents = function() {
 EventsListing.prototype.generateNewEvent = function( eventID, xCoordinate, yCoordinate ) {
   var newEvent = new Event( eventID, xCoordinate, yCoordinate );
   this.area.grid[xCoordinate][yCoordinate] = newEvent;
-  this.addNewEvent(newEvent);
+  this.addNewEvent( newEvent );
 };
 
 EventsListing.prototype.getRandomBinary = function() {
-  return Math.round(Math.random());
+  return Math.round( Math.random() );
 };

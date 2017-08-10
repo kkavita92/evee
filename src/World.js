@@ -3,7 +3,7 @@
 var World = function( width, height ) {
   this.width = width;
   this.height = height;
-  this.grid = null
+  this.grid = null;
   this.createWorld();
 };
 

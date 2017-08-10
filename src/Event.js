@@ -11,14 +11,13 @@ var Event = function( eventID, xCoordinate, yCoordinate ) {
 
 Event.prototype.generateTickets = function() {
   var numberOfTickets = this.eventCapacity;
-
   for( var i = 0; i < numberOfTickets ; i++ ) {
-    this.tickets.push(new Ticket());
+    this.tickets.push( new Ticket() );
   }
 };
 
 Event.prototype.setEventCapacity = function() {
-  return Math.floor((Math.random() * 150) + 1);
+  return Math.floor( (Math.random() * 150) + 1 );
 };
 
 Event.prototype.getCheapestTicket = function() {

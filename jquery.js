@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var app = new Interface;
+  var app = new Interface( 20, 20 );
 
   $('#submitcoordinates').click(function() {
     app.getUserCoordinates($("#xcoordinate").val(), $("#ycoordinate").val())

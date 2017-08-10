@@ -1,13 +1,13 @@
 'use strict';
 
-var Interface = function() {
+var Interface = function( worldWidth, worldHeight ) {
   this.userCoordinates = null;
   this.eventsListing = null;
-  this.createEventsListing(20, 20);
+  this.createEventsListing( worldWidth, worldHeight );
 };
 
-Interface.prototype.createEventsListing = function( areaWidth, areaHeight ) {
-  this.eventsListing = new EventsListing( areaWidth, areaHeight );
+Interface.prototype.createEventsListing = function( worldWidth, worldHeight ) {
+  this.eventsListing = new EventsListing( worldWidth, worldHeight );
   this.eventsListing.generateEvents();
 };
 
@@ -21,7 +21,7 @@ Interface.prototype.getClosestEvents = function() {
 };
 
 Interface.prototype.sortEventsByDistance = function() {
-  this.eventsListing.findEventsDistanceFrom(this.userCoordinates);
+  this.eventsListing.findEventsDistanceFrom( this.userCoordinates );
   this.eventsListing.events.sort((a,b)=> a.distance-b.distance);
   return this.eventsListing.events;
 };
@@ -30,8 +30,8 @@ Interface.prototype.closestEventsList = function() {
   var events = this.getClosestEvents();
   var formattedEvents = [];
   for ( var i = 0; i < events.length; i++ ) {
-    var formattedEvent = this.formatEvent(events[i]);
-    formattedEvents.push(formattedEvent);
+    var formattedEvent = this.formatEvent( events[i] );
+    formattedEvents.push( formattedEvent );
   }
 
   return formattedEvents;

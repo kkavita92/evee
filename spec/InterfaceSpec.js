@@ -5,7 +5,7 @@ describe("Interface", function() {
   var app;
 
   beforeEach( function() {
-    app = new Interface();
+    app = new Interface(20, 20);
   });
 
   it("can set user coordinates", function() {
