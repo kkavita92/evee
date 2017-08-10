@@ -4,16 +4,25 @@
     <link href='public/stylesheets/style.css' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="src/Ticket.js"></script>
+    <script src="src/Event.js"></script>
+    <script src="src/EventsListing.js"></script>
+    <script src="src/DistanceCalculator.js"></script>
+    <script src="src/Interface.js"></script>
+    <script src="src/World.js"></script>
+    <script src="jquery.js"></script>
   <head>
   <body>
     <div id="main-app">
       <h1 id="header">eVee</h1>
       <div id="location-input">
         <h3>What's your location?<h3>
+        <p id="user-status"></p>
         <form id="enter-coordinates">
           <input id="xcoordinate" type="text" placeholder="x-coordinate"></input>
           <p><input id="ycoordinate" type="text" placeholder="y-coordinate"></input>
-          <p><input class="button" type="submit"></input>
+          <p><input id="submitcoordinates" class="button" type="submit"></input>
         </form>
       </div>
     <div>

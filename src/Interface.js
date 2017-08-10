@@ -16,6 +16,11 @@ Interface.prototype.getUserCoordinates = function(x_coordinate, y_coordinate) {
 };
 
 Interface.prototype.getClosestEvents = function() {
+  var eventsSortedByDistance = this.sortEventsByDistance();
+  return eventsSortedByDistance.splice(0, 5);
+}
+
+Interface.prototype.sortEventsByDistance = function() {
   this.eventsListing.findEventsDistanceFrom(this.userCoordinates);
   this.eventsListing.events.sort((a,b)=> a.distance-b.distance);
   return this.eventsListing.events;
