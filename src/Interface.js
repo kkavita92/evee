@@ -3,7 +3,7 @@
 var Interface = function() {
   this.userCoordinates = null;
   this.eventsListing = null;
-  this.createEventsListing(5, 5);
+  this.createEventsListing(20, 20);
 };
 
 Interface.prototype.createEventsListing = function(areaWidth, areaHeight) {

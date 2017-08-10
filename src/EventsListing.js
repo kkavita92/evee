@@ -19,11 +19,11 @@ EventsListing.prototype.findEventsDistanceFrom = function(coordinates) {
 
 EventsListing.prototype.generateEvents = function() {
   var eventCount = 1;
-  for ( var j = 0; j < this.area.height; j++ ) {
-    for ( var k = 0; k < this.area.width; k++ ) {
+  for ( var yCoordinate = 0; yCoordinate < this.area.height; yCoordinate++ ) {
+    for ( var xCoordinate = 0; xCoordinate < this.area.width; xCoordinate++ ) {
       var randomBinary = this.getRandomBinary();
       if (randomBinary === 1 ) {
-        this.generateNewEvent(eventCount, k, j);
+        this.generateNewEvent(eventCount, xCoordinate, yCoordinate);
         eventCount++;
       }
     }
