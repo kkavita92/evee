@@ -6,7 +6,7 @@ describe("Event", function() {
   var eventID = 1;
 
   beforeEach( function() {
-    event = new Event(eventID); // Remove hardcoded eventID
+    event = new Event(eventID);
   });
 
   it("has a numeric eventID", function() {

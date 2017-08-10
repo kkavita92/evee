@@ -14,7 +14,7 @@ describe("EventsListing", function() {
 
   it("can add new event to events array", function() {
     eventsListing.addNewEvent('event');
-    expect(eventsListing.events[0]).toEqual('event'); //change to mock
+    expect(eventsListing.events[0]).toEqual('event'); 
   });
 
   describe("getting random binary", function () {

@@ -18,8 +18,9 @@ describe("World", function() {
   });
 
   it("world grid has same number of columns as width", function(){
-    expect(world.grid[0].length).toEqual(world.width);
-    // make test more thorough?
+    for (var row = 0; row < world.grid.length; row++) {
+      expect(world.grid[row].length).toEqual(world.width);
+    };
   });
 
 });
